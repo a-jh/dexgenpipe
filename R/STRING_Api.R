@@ -60,10 +60,10 @@ names(NCBI_id_list) <- list_names
 ##       Setting initil info       ##
 #####################################
 
-# define the prfered species' name from the names in list_names 
+# define the preferred species' name from the names in list_names 
 species = "fly"
 
-# define the prfered ontology domain
+# define the preferred ontology domain
 ont_domain = "molecular_function"   #  possible values : "cellular_component","molecular_function",
                                                                                                                 #" biological_process"
 
@@ -84,8 +84,8 @@ id_method = "get_string_ids"
 net_method = "network"
 
 # required_score and additional nodes are not used if default is "true"
-default = "true"      # values : "true", "false"
-required_score = 1000 # threshold of significance to include a interaction,
+default = "false"      # values : "true", "false"
+required_score = 900 # threshold of significance to include a interaction,
                       # a number between 0 and 1000 (default depends on the network)
 add_nodes = 0         # adds a number of proteins with to the network 
                       # based on their confidence score
@@ -184,7 +184,7 @@ for (idx in 1:treat_count){
     
     if (default == "false"){
         net_params$required_score = required_score
-        net_params$add_nodes = net_params        
+        net_params$add_nodes = add_nodes        
     }
     
     net_params$identifiers = paste(lid_parsed_results[[idx]]$stringId, collapse = "%0d")

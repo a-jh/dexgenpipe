@@ -98,10 +98,10 @@ names(NCBI_id_list) <- list_names
 ##         Setting initil info          ##
 ##########################################
 
-# define the prfered species' name from the names in list_names 
+# define the preferred species' name from the names in list_names 
 species = "fly"
 
-# define the prfered ontology domain
+# define the preferred ontology domain
 ont_domain = "molecular_function"           #  possible values : "cellular_component","molecular_function",
                                                                                                                         #" biological_process"
 
